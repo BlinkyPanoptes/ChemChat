@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ChemChat Landing Page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    </head>
+    <body>
+        <header>
+            <img src="{{ url_for('static', filename='ChemChat Logo.png') }}" alt="ChemChat Logo">
+            <h1>ChemChat</h1>
+        </header>
+
+        <main>
+            <div class="Introduction">
+                <h2>WELCOME TO CHEMCHAT</h2>
+                <p>We’re thrilled to have you on board as we experiment </p>
+                <p>and refine our platform in this beta phase.</p>
+                <p>Your feedback is crucial as we work to create</p>
+                <p>the perfect connection experience.</p>
+            </div>
+            <div class="Signup-box">
+                <div class="Signup-content">
+                    <h2>Sign Up</h2>
+                    <form id="signup-form" action="/signup" method="POST">
+                        <input type="text" name="username" placeholder="Username" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="submit" value="Sign Up">
+                    </form>
+                    <p>Already have an account? <a href="#" id="toggle-to-signin">Sign In</a></p>
+                    <div id="notification" class="notification"></div>
+                </div>
+                <div class="Signin-content">
+                    <h2>Sign In</h2>
+                    <form id="signin-form" action="/signin" method="POST">
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="submit" value="Sign In">
+                    </form>
+                    <p>Don't have an account? <a href="#" id="toggle-to-signup">Sign Up</a></p>
+                    <div id="signin-notification" class="notification"></div>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const signupBox = document.querySelector('.Signup-box');
+                const toggleToSignin = document.getElementById('toggle-to-signin');
+                const toggleToSignup = document.getElementById('toggle-to-signup');
+
+                toggleToSignin.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    signupBox.classList.add('active');
+                });
+
+                toggleToSignup.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    signupBox.classList.remove('active');
+                });
+            });
+        </script>
+    {{data}}
+    </body>
+</html>

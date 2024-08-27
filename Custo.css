@@ -1,0 +1,110 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #0F3460;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: #1A1A2E;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header img {
+    height: 65px;
+    width: auto;
+    margin-right: 10px;
+}
+
+header h1 {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+}
+
+.Custo-box {
+    width: 370px;
+    height: 400px;
+    flex: 1;
+    background-color: #16213E;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.Custo-box h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: -5px;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+}
+
+.Custo-box p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgb(255, 255, 255);
+}
+
+.Custo-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Custo-box input[type="text"],
+.Custo-box input[type="number"] {
+    padding: 10px;
+    margin-bottom: 13px;
+    border: 1px solid #add;
+    border-radius: 4px;
+    width: 250px; 
+}
+
+.Custo-box input[type="submit"] {
+    padding: 10px;
+    background-color: #0F3460;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 270px;
+}
+
+.Custo-box input[type="submit"]:hover {
+    background-color: #E94560;
+}
+
+.Custo-box label {
+    margin-bottom: 15px;
+}
+
+.Custo-box select {
+    padding: 10px;
+    margin-bottom: 13px;
+    border: 1px solid #add;
+    border-radius: 4px;
+    width: 270px;
+    background-color: #16213E;
+    color: white;
+    font-size: 16px;
+}

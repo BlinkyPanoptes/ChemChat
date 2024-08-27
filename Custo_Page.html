@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=decvice-width, initial-scale=1.0">
+        <title>Customization Page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='Custo.css') }}">
+    </head>
+    <body>
+        <header>
+            <img src="{{ url_for('static', filename='ChemChat Logo.png') }}" alt="ChemChat Logo">
+            <h1>ChemChat</h1>
+        </header>
+        <main>
+            <div class="Custo-box">
+                <h2>WELCOME!</h2>
+                <p>Please fill up the following to start chatting and find your possible chemistry</p>
+                <form id="Custo-form" action="/user_dt" method="POST">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="text" name="nickname" placeholder="Nickname" required>
+                    <input type="number" name="age" placeholder="Age" min="1" max="120" required>
+
+                    <label for="preference" style="color: white"> I want to chat with</label>
+                    <select name="preference" id="preference" requierd>
+                        <option value="">Select Preference</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="bisexual">Bisexual</option>
+                        <option value="gay">Gay</option>
+                        <option value="lesbian">Lesbian</option>
+                    </select>
+                    <input type="submit" value="Chat Now">
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
